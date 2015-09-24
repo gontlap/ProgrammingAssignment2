@@ -31,9 +31,9 @@ cacheSolve <- function(x, ...) {
     return(inv)
   }
   #else compute and store
-  tempdata <-X$get()
+  tempdata <-x$get()
   x$set(tempdata)  
   inv<-solve(tempdata,...)
-  X$setInverse(inv)
+  x$setInverse(inv)
   inv
 }
